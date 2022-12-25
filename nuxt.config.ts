@@ -1,6 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    ssr: false,
+    ssr: true,
+    routeRules:{
+      '/backend/**':{ssr:false},
+    },
     build: {
       transpile: ["vuetify"],
     },
